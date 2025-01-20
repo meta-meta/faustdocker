@@ -19,7 +19,7 @@ RUN apk add --no-cache gcc musl-dev cmake g++ make git pkgconfig
 # libexecinfo libexecinfo-dev
 
 #COPY faust /faust
-RUN git clone https://github.com/grame-cncm/faust.git
+RUN git clone https://github.com/meta-meta/faust.git
 WORKDIR /faust
 RUN git fetch && git checkout fb873f1
 RUN make -C /faust/build cmake CMAKEOPT='-DFAUST_DEFINITIONS="-DALPINE"'
